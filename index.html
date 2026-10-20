@@ -95,7 +95,7 @@ h1,h2,h3,p{margin:0}
 .photo .copy{position:absolute;left:var(--g);right:var(--g);bottom:clamp(40px,8vh,80px);max-width:60rem}
 .credit{position:absolute;z-index:14;bottom:clamp(40px,8vh,80px);right:var(--g);font-size:12px;line-height:1.5;color:var(--grey);text-align:right;max-width:20rem;text-shadow:0 0 10px rgba(10,10,10,.9)}
 .hero h1{font-size:var(--s7);font-weight:500;letter-spacing:-.05em;line-height:.9}
-.hero .copy p{margin-top:clamp(14px,2vh,26px);max-width:15em;font-size:clamp(28px,calc(28px + 29 * var(--f)),57px);font-weight:400;line-height:1.08;letter-spacing:-.03em;color:var(--paper);text-wrap:balance}
+.hero .copy p{margin-top:clamp(14px,2vh,24px);max-width:19em;font-size:clamp(22px,calc(22px + 16 * var(--f)),38px);font-weight:300;line-height:1.18;letter-spacing:-.018em;color:#ecebe6;text-wrap:balance}
 
 /* sections broken down: title (step 4), subtitle (step 1), then the details */
 .block{position:relative;padding:clamp(110px,14vh,170px) var(--g) clamp(100px,12vh,150px);max-width:1600px;margin:0 auto}
@@ -117,8 +117,6 @@ h1,h2,h3,p{margin:0}
 .chap:not(.on){opacity:0;transform:translateY(14px)}
 .chap .sub{margin-top:16px}
 .relief .credit{top:auto;bottom:clamp(40px,8vh,80px)}
-.hint-touch{display:none}
-@media (hover:none){.hint-hover{display:none}.hint-touch{display:inline}}
 /* the crosshair: altitude and position of the ground under the pointer */
 .probe{position:absolute;left:0;top:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .2s ease}
 .probe.on{opacity:1}
@@ -210,7 +208,6 @@ footer a{color:var(--paper);text-decoration:none}
   <span class="hole r" data-hole style="--y:12vh"></span>
   <div class="stick">
     <canvas id="relief-cv" role="img" aria-label="Line drawing of the Swiss relief, with the terrain of the neighbouring countries in faint lines, turning as the page scrolls: a power line across the country, the directions to Frankfurt, Milan and Paris, Zürich, and the Alpine reservoirs"></canvas>
-    <p class="credit"><span class="hint-hover">Point at the relief to read the altitude</span><span class="hint-touch">Tap the relief to read the altitude</span></p>
     <div class="probe" id="probe" aria-hidden="true">
       <svg width="22" height="22" viewBox="-11 -11 22 22"><path d="M-10 0H-4M4 0H10M0-10V-4M0 4V10" stroke="#0a0a0a" stroke-width="3.4" stroke-linecap="round"/><path d="M-10 0H-4M4 0H10M0-10V-4M0 4V10" stroke="#f4f3ef" stroke-width="1.2" stroke-linecap="round"/><circle r="1.5" fill="#f4f3ef"/></svg>
       <span class="read"><span class="alt"></span><span class="geo"></span></span>
